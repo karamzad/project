@@ -6,13 +6,14 @@ from pyrocko import  orthodrome
 
 
 def all_dist(lats, lons):
-    dis = np.zeros([10,10])
-    for ind in  range(0, len(lats)):  
+    nl = len(lats)
+    dis = np.zeros([nl,nl])
+    for ind in  range(0, nl):  
         dis[ind] = orthodrome.distance_accurate50m_numpy( lats, lons, lats[ind], lon[ind]) 
     return dis
     
     
-    fname = 'vogtland.slist' 
+fname = 'vogtland.slist' 
 f = open(fname)
 lines = f.readlines()
 f.close()
