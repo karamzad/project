@@ -1,4 +1,4 @@
-#!/usr/bin python env
+#!/usr/bin/env python 
 #  this program reads stations position from an input file and calculate the minimum distance between stations.
 
 import numpy as np
